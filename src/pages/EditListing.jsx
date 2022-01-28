@@ -61,7 +61,7 @@ function EditListing() {
             toast.error('You can not edit that listing')
             navigate('/')
         }
-    }, [])
+    }, [auth.currentUser.uid, listing, navigate])
 
   const onSubmit = async (e) => {
     e.preventDefault()

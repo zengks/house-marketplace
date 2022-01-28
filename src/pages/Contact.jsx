@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react'
 import {useParams, useSearchParams} from 'react-router-dom'
 import {doc, getDoc} from 'firebase/firestore'
 import { db } from '../firebase.config';
-import {toast} from 'react-toastify'
 
 function Contact() {
 
@@ -38,7 +37,7 @@ function Contact() {
 
         getLandlord()
 
-    }, [params.landlord])
+    }, [params.landlord, params.landlordId])
 
     const onChange = (e) => {
         setMessage(e.target.value)
